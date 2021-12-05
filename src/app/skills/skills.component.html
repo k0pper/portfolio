@@ -1,0 +1,19 @@
+<div class="flex flex-col h-3/4 transition-all fadeAnim">
+
+    <div class="flex flex-row h-28 mb-8">
+        <div class="w-1/4">
+            <h1>Skills</h1>
+        </div>
+
+        <div class="w-3/4">
+            <span class="text">
+                Instead of listing every single technology I ever touched, I try to give you an expression of the fields I am confident and spent a lot of time in. Things like git and programming languages that are included in those technologies are not mentioned.
+            </span>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap gap-6 justify-center">
+        <app-skill-card *ngFor="let skill of skills" [skill]="skill"></app-skill-card>
+    </div>
+
+</div>

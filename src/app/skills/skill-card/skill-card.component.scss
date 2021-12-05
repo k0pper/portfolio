@@ -1,0 +1,8 @@
+.level::after {
+    content: "";
+    position: relative;
+    bottom: 0;
+    height: 222;
+    width: 222;
+    background: red;
+}

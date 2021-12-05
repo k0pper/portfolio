@@ -1,0 +1,7 @@
+.navul li {
+    @apply text-center self-center block pl-1 pr-1 pt-4 pb-1 ml-3 mr-3 cursor-pointer text-lg;
+}
+
+.nav-active {
+   @apply text-secondary border-solid text-xl transition-all; 
+}
