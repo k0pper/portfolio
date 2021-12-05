@@ -1,16 +1,15 @@
+<div class="flex justify-center fadeAnim">
 
-<div class="bg-image"></div>
+  <div class="w-4/5">
 
-    <div class="flex w-screen h-screen justify-center fadeAnim">
-      <div class="w-3/4">
-        <app-navbar></app-navbar>
-        
-        <div class="pt-16 h-3/4 transition-all">
-          <!-- <div class="h-full w-full" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''"> -->
-            <router-outlet #o="outlet"></router-outlet>
-          <!-- </div> -->
-        </div>
-
-      </div>
+    <app-navbar></app-navbar>
+    <div class="xl:pt-16 xs:pt-4 transition-all">
+      <router-outlet #o="outlet"></router-outlet>
     </div>
 
+  </div>
+
+</div>
+
+<div class="bg-image"></div>
+<div class="bg-backdrop bg-black"></div>
