@@ -15,4 +15,24 @@ export class SkillCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getLevelWidth(){
+    return this.skill?.level + "%";
+  }
+
+  getLevelColor() {
+    if (this.skill?.level) {
+      if (this.skill?.level < 25) {
+        return '#ff8c00';
+      } else if (this.skill?.level < 50) {
+        return '#ff0000';
+      } else if (this.skill?.level < 75) {
+        return "green";
+      } else if (this.skill?.level < 100) {
+        return "#00ff00";
+      }
+    }
+    return "black"
+
+  }
+
 }

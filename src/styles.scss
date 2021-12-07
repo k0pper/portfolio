@@ -36,7 +36,10 @@ p {
 }
 
 
-
+.slick-button {
+    @apply bg-gradient-to-r from-secondary to-yellow-600 p-2 rounded-md font-light shadow-lg transition-all duration-500;
+    @apply  hover:to-yellow-600
+}
 
 
 .fadeAnim {
