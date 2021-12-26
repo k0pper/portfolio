@@ -1,3 +1,82 @@
+// .wrapper {
+//     display: grid;
+//     justify-self: center;
+//     height: 100%;
+//     width: 80%;
+//     // 
+//   }
+  
+  .wrapper { 
+    display: grid;
+    height: 100vh;
+    width: 80%;
+    // border: solid 3px red;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "content content content"
+      "footer footer footer";
+  }
+  
+  .h { grid-area: header; }
+  
+  .c {
+      grid-area: content;
+      overflow-x: hidden;
+  }
+  
+  .f { grid-area: footer; }
+  
+
+
+.f {
+    display: grid;
+    justify-content: right;
+    align-items:center;
+}
+
+.f .social {
+    
+}
+
+.f .social img {
+    display: inline-block;
+    align-items: flex-start;
+    opacity: 0.2;
+    @apply inline-block w-12 mr-2 cursor-pointer transition-all;
+    &:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+        // filter color
+        filter: hue-rotate(180deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.slick-button {
+    background: Red;
+}
+
+.bg-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+}
+
 .bg-image {
     width: 100%;
     height: 100%;
@@ -12,24 +91,11 @@
     bottom: 0;
     left: 0;
     
-    opacity: 0.2;
+    opacity: 0.1;
     z-index: -1;
     
     filter: blur(12px);
     -webkit-filter: blur(12px);
 
 
-}
-
-.slick-button {
-    background: Red;
-}
-
-.bg-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: -2;
 }

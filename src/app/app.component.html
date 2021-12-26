@@ -1,15 +1,37 @@
-<div class="flex justify-center fadeAnim xs:p-2">
-
-  <div class="xs:w-full sm:w-4/5">
+<!-- 
+  <div class="xs:w-full sm:full">
 
     <app-navbar></app-navbar>
     <div class="xl:pt-16 xs:pt-4 transition-all">
-      <router-outlet #o="outlet"></router-outlet>
+      <app-home></app-home>
     </div>
 
-  </div>
+  </div> -->
 
-</div>
 
 <div class="bg-image"></div>
 <div class="bg-backdrop bg-black"></div>
+
+<div class="wrapper">
+
+  <div class="h">
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="c xs:overflow-y-hidden sm:overflow-y-auto">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="f">
+    <div class="social">
+        <a href="https://www.xing.com/profile/Alexander_Miller77/" target="_blank"><img src="assets/xing.png"
+            alt=""></a>
+        <a href="https://twitter.com/Alex_M1ller" target="_blank"><img src="assets/twitter.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/alexandermill3r/" target="_blank"><img src="assets/linkedin.png"
+                alt=""></a>
+        <a href="https://github.com/k0pper" target="_blank"><img src="assets/github.png" alt=""></a>
+    </div>
+</div>
+
+</div>
+

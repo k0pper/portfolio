@@ -1,23 +1,117 @@
-<div class="flex flex-col transition-all fadeAnim">
+<!-- <div class="flex flex-col transition-all fadeAnim">
 
     <div class="flex lg:flex-row xs:flex-col mb-8">
 
-        <div class="lg:w-2/12 xs:w-full xs:mb-3 ">
+        <div class="xs:w-full xs:mb-3 ">
             <h1 class="lg:text-left xs:text-center">Skills</h1>
         </div>
 
-        <div class="lg:w-10/12 xs:w-full">
-            <p class="lg:text-right xs:text-center">
-                Instead of listing every single technology I ever touched, I try to give you an expression of the fields
-                I am confident and spent a lot of time in. Things like git and programming languages that are included
-                in those technologies are not mentioned.
-            </p>
-        </div>
+ 
     </div>
 
     <div class="flex flex-wrap justify-around gap-3">
         <app-skill-card *ngFor="let skill of skills" [skill]="skill">
         </app-skill-card>
+        
     </div>
 
+</div> -->
+<!-- 
+<div class="skills">
+    <app-skill-card *ngFor="let skill of skills" [skill]="skill">
+    </app-skill-card>
+</div> -->
+
+
+<div class="wrapper pageFade opacity-0">
+    <div id="item1" class="item item1" (click)="onItemClick($event)">
+        <div class="item-content">
+            <h1>Developer</h1>
+            <div *ngIf="expanded['item1']" class="transition-all fadeFromRight opacity-0">
+                <div class="mb-5">
+                    <p> I love to build things. Not only apps. I am also constantly building my knowledge of different
+                        kind of technologies. I'm specializing in the Frontend Stack, but also got my Hands onto Server-Programming, Databases
+                        and Mobile Apps. In my Freetime, I use the one or another Hour to learn about Game Development.
+                    </p>
+                </div>
+
+
+                <h2 >Technologies</h2>
+                <ul>
+                    <li><img src="../../assets/angular.png" alt=""></li>
+                    <li><img src="../../assets/spring.png" alt=""></li>
+                    <li><img src="../../assets/nodejs.png" alt=""></li>
+                    <li><img src="../../assets/flutter.png" alt=""></li>
+                    <li><img src="../../assets/python.png" alt=""></li>
+                    <li><img src="../../assets/unity.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="item2" class="item item2" (click)="onItemClick($event)">
+        <div class="item-content">
+            <h1>Infrastructurer</h1>
+            <div *ngIf="expanded['item2']" class="transition-all fadeFromRight opacity-0">
+                <div class="mb-5">
+                    <p>
+                        Not only I built apps, but I also understand what is necessary to power them with necessary
+                        Resources. I am aware of methods to automatically deploy modern Applications and designed
+                        as well as reviewed multiple DevOps Pipelines.
+                    </p>
+                </div>
+
+
+                <h2>Technologies</h2>
+                <ul>
+                    <li><img src="../../assets/aws.png" alt=""></li>
+                    <li><img src="../../assets/docker.png" alt=""></li>
+                    <li><img src="../../assets/firebase.png" alt=""></li>
+                    <li><img src="../../assets/flutter.png" alt=""></li>
+                    <li><img src="../../assets/python.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="item3" class="item item3" (click)="onItemClick($event)">
+        <div class="item-content">
+            <h1>Designer</h1>
+            <div *ngIf="expanded['item3']" class="transition-all fadeFromRight opacity-0">
+                <div class="mb-5">
+                    <p>
+                        As I said, I am a prospective Designer. I love to design user-friendly Interfaces and research
+                        UX-Topics. I still have much to learn, but I am certain that I have got an eye for usable,
+                        eye-candy User-Interfaces.
+                    </p>
+                </div>
+
+
+                <h2>Technologies</h2>
+                <ul>
+                    <li><img src="../../assets/figma.svg" alt=""></li>
+                    <li><img src="../../assets/scss.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="item4" class="item item4" (click)="onItemClick($event)">
+        <div class="item-content">
+            <h1 >Teamplayer</h1>
+            <div *ngIf="expanded['item4']" class="transition-all fadeFromRight opacity-0">
+                <div class="mb-5">
+                    <p>
+                        I'm not only a Techie, but also a Human. People like to work with me. Furthermore, I have experience with agile Methods like Scrum. I am also bilingual and love to play Video Games 🎮.
+                    </p>
+                </div>
+    
+    
+                <h2>Frameworks</h2>
+                <ul>
+                    <li><img src="../../assets/scrum.png" alt=""></li>
+                    <li><img src="../../assets/german.png" alt=""></li>
+                    <li><img src="../../assets/russian.png" alt=""></li>
+                    <li><img src="../../assets/english.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

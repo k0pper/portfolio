@@ -1,27 +1,71 @@
-.social-media img {
-    @apply inline-block w-12 ml-2 cursor-pointer transition-all;
-
-    &:hover {
-        opacity: 0.8;
-        transform: translateY(-2px);
-        // filter color
-        filter: hue-rotate(180deg);
-    }
-}
-
-
 .floatAnim {
     animation: float 6s ease-in-out infinite;
 
     -webkit-animation: floating 5s ease-in-out infinite; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: floating 5s ease-in-out infinite; /* Firefox < 16 */
-        -ms-animation: floating 5s ease-in-out infinite; /* Internet Explorer */
-         -o-animation: floating 5s ease-in-out infinite; /* Opera < 12.1 */
-            animation: floating 5s ease-in-out infinite;
+    -moz-animation: floating 5s ease-in-out infinite; /* Firefox < 16 */
+    -ms-animation: floating 5s ease-in-out infinite; /* Internet Explorer */
+    -o-animation: floating 5s ease-in-out infinite; /* Opera < 12.1 */
+    animation: floating 5s ease-in-out infinite;
 }
 
 @keyframes floating {
-    0% { transform: translateY(0px); box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.911); }
-    50% { transform: translateY(-10px); box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.637);}
-    100%   { transform: translateY(0px); box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.897);}
+    0% {
+        transform: translateY(10px);
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.911);
+    }
+    50% {
+        transform: translateY(0px);
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.637);
+    }
+    100% {
+        transform: translateY(10px);
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.897);
+    }
+}
+
+.c {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .c {
+        grid-template-areas:
+        "me pic"
+        "me pic";
+    }
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .c {
+        grid-template-areas:
+        "me me"
+        "pic pic";
+    }
+}
+
+.pic {
+    display: grid;
+    grid-area: pic;
+
+    .pic-container {
+        display: grid;
+        justify-self: center;
+        justify-content: center;
+        width: 95%;
+
+        
+    }
+}
+
+.me {
+    display: grid;
+    grid-area: me;
+    justify-content: center;
+    align-content: center;
 }

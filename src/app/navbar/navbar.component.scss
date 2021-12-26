@@ -5,6 +5,11 @@
         cursor-pointer text-lg;
 }
 
+.disabled {
+    color: rgba(128, 128, 128, 0.788);
+    cursor: default;
+}
+
 .nav-active {
    @apply text-secondary border-solid text-xl transition-all; 
 }

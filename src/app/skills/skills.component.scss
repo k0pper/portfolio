@@ -1,0 +1,117 @@
+.skills {
+    display: grid;
+    gap: 1em;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.item {
+
+    h1 {
+        @apply xs:text-base xs:font-bold lg:text-3xl;
+    }
+
+    h2 {
+       @apply xs:text-base xs:font-bold lg:text-xl;
+    }
+
+    p {
+        @apply xs:text-sm md:text-base;
+    }
+
+    box-shadow: inset 0px 100px 100px 4px #000000a8;
+    transition: 0.5s;
+    width: 25%;
+    overflow: hidden;
+    background-position: center;
+
+
+    overflow-y: auto;
+
+    .item-content {
+        display: grid;
+        padding: 30px 20px;
+
+        h1 {
+            letter-spacing: -1px;
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            img {
+                height: 50px;
+
+               
+            }
+        }
+    }
+
+
+}
+
+
+
+.item1 {
+    background-image: URL("../../assets/skills/angular-code.jpg");
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+    
+
+}
+
+.item2 {
+    background-image: URL("../../assets/skills/infra.jpg");
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+}
+
+.item3 {
+    background-image: url("../../assets/skills/design.jpg");
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+}
+
+.item4 {
+    background-image: url("../../assets/skills/team.jpg");
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w70 {
+    width: 70%;
+    -webkit-box-shadow: inset 0px 50px 38px 4px #000000; 
+    box-shadow: inset 0px 500px 300px 4px #000000a8;
+}
+
+
+
+.item:not(.w70) {
+
+
+    &:hover {
+        filter: brightness(120%) contrast(100%);
+        box-shadow: inset 0 0px 20px 5px rgba(0, 0, 0, 0.432);
+    }
+}

@@ -3,36 +3,39 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap');
 
 * {
-    font-family: 'Readex Pro', sans-serif;
+    font-family: 'Assistant', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;    
 }
 
 
-html, body {
-    width: 100%;
+body, app-root {
+    height: 100vh;
+    display: grid;
     margin: 0 !important;
     @apply text-white; 
+    overflow: hidden;
 }
 
 body {
     background-color: black;
+    // border:  dotted 3px gray;
 }
 
 
 h1 {
-    @apply text-5xl font-medium;
+    @apply text-5xl font-medium mb-1;
 }
 
 h2 {
-    @apply text-lg font-light;
+    @apply text-2xl font-light mb-1;
 }
 
 p {
-    @apply font-extralight;
+    @apply font-normal text-lg;
 }
 
 
@@ -43,8 +46,6 @@ p {
 
 
 .fadeAnim {
-    margin-top: 25px;
-    font-size: 21px;
 
     -webkit-animation: fadein 0.3s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 0.3s; /* Firefox < 16 */
@@ -80,4 +81,48 @@ p {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+
+.fadeFromRight {
+
+    -webkit-animation: fadeFromRight 0.6s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeFromRight 0.6s; /* Firefox < 16 */
+        -ms-animation: fadeFromRight 0.6s; /* Internet Explorer */
+         -o-animation: fadeFromRight 0.6s; /* Opera < 12.1 */
+            animation: fadeFromRight 0.6s;
+            animation-delay: 0.4s;
+            animation-fill-mode: forwards;
+}
+
+@keyframes fadeFromRight {
+    from { 
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pageFade {
+
+    -webkit-animation: pageFade 0.6s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: pageFade 0.6s; /* Firefox < 16 */
+        -ms-animation: pageFade 0.6s; /* Internet Explorer */
+         -o-animation: pageFade 0.6s; /* Opera < 12.1 */
+            animation: pageFade 0.6s;
+            animation-delay: 0.1s;
+            animation-fill-mode: forwards;
+}
+
+@keyframes pageFade {
+    from { 
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }

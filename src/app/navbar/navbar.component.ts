@@ -10,22 +10,42 @@ export class NavbarComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
   ngOnInit(): void {
-  }
-  
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-      const navbar = this.document.getElementById('sticky-navbar');
-      // determine whether navbar is at top of screen
-      
-      if (navbar) {
-        if (navbar.getBoundingClientRect().top <= 0) {
-          navbar.classList.add('sticky-style');
-        } else {
-          navbar.classList.remove('sticky-style');
-        }
-      }
-
-    }
+    // this.refreshStickyClasses();
   }
 
- 
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //   this.refreshStickyClasses();
+  // }
+
+  // @HostListener('window:resize', [])
+  // onWindowResize() {
+  //   this.refreshStickyClasses();
+  // }
+
+  // private refreshStickyClasses() {
+  //   const navbarBig = this.document.getElementById('big-screen-header');
+  //   if (navbarBig) {
+  //     if (window.innerWidth < 768) {
+  //       navbarBig.classList.remove("sticky");
+  //     } else {
+  //       navbarBig.classList.add("sticky");
+  //     }
+  //   }
+
+  //   const navbarSmall = this.document.getElementById('small-screen-header');
+  //   if (navbarSmall) {
+  //     if (navbarSmall.getBoundingClientRect().top <= 0) {
+  //       navbarSmall.classList.add('sticky-style');
+  //     } else {
+  //       navbarSmall.classList.remove('sticky-style');
+  //     }
+  //   }
+
+    
+  // }
+}
+
+
+
+
